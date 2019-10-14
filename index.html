@@ -7,28 +7,53 @@
 
     <!-- Wire CSS -->
     <link rel="stylesheet" href="https://npmcdn.com/wire.css/dist/wire.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Inschrijvingsformulier NK Little League 2020</title>
 </head>
 
 <body>
-
-    <h1>Inschrijvingsformulier 2020</h1>
-
-    <form class="form" data-grid="column">
+<main>
+    <h1>Inschrijvingsformulier NK Little League 2020</h1>
+    <form class="form" data-grid="column ">
         <!-- naamgegevens -->
         <div class="row" id="naam" data-grid="row">
-            <div class="field" data-col="4">
+            <div class="field col-4" >
                 <label for="voornaam">Voornaam</label>
                 <input id="voornaam" type="text" placeholder="Voornaam" />
             </div>
-            <div class="field" data-col="4">
+            <div class="field col-4">
                 <label for="tussenvoegels">Tussenvoegels</label>
                 <input id="tussenvoegels" type="text" placeholder="Tussenvoegels" />
             </div>
-            <div class="field" data-col="4">
+            <div class="field col-4">
                 <label for="achternaam">Achternaam</label>
                 <input id="achternaam" type="text" placeholder="Achternaam" />
             </div>
         </div>
+
+        <div class="row" data-grid="row">
+            <div class="field col-4">
+                <label for="emailadres">Emailadres</label>
+                <input id="emailadres" type="email" placeholder="Emailadres" />
+            </div>
+            <div class="field  col-4">
+                <label for="club">Club</label>
+                <input id="club" type="text" placeholder="Club" />
+            </div>
+            <div class="field col-6" >
+                <label for="options">Sport keuze</label>
+                <select name="options" id="options">
+                    <option value="" disabled selected>Maak u keuze</option>
+                    <option value="op1">Honkbal</option>
+                    <option value="op2">Softball</option>
+                </select>
+            </div>
+            <div class="field  col-4">
+                <label for="leeftijd">Leeftijd</label>
+                <input id="leeftijd" type="text" placeholder="Leeftijd" />
+            </div>
+        </div>
+
         <div class="row" data-grid="row">
             <div class="col-6" data-grid="column">
                 <h2>Thuis adres</h2>
@@ -65,30 +90,10 @@
                 </div>
             </div>
         </div>
+
         <div class="row" data-grid="row">
-            <div class="field" data-col="4">
-                <label for="emailadres">Emailadres</label>
-                <input id="emailadres" type="email" placeholder="Emailadres" />
-            </div>
-            <div class="field" data-col="4">
-                <label for="club">Club</label>
-                <input id="club" type="text" placeholder="Club" />
-            </div>
-            <div class="field" data-col="4">
-                <label for="leeftijd">Leeftijd</label>
-                <input id="leeftijd" type="date" placeholder="Leeftijd" />
-            </div>
-        </div>
-        <div class="row" data-grid="row">
-            <div class="field" data-col="6">
-                <label for="options">Sport keuze</label>
-                <select name="options" id="options">
-                    <option value="" disabled selected>Maak u keuze</option>
-                    <option value="op1">Honkbal</option>
-                    <option value="op2">Softball</option>
-                </select>
-            </div>
-            <div class="col-6">
+
+            <div class="field col-6">
                 <label for="options">Regio keuze</label>
                 <select name="options" id="options">
                     <option value="" disabled selected>Maak u keuze</option>
@@ -104,15 +109,21 @@
                     <option value="op10">Rotterdam</option>
                 </select>
             </div>
-            <div class="field">
+        </div>
+        <div class="row" data-grid="row">
+            <div class="field col-6">
                 <input type="checkbox" id="check"/>
                 <label for="check">Accept <a href="#form">Terms and Conditions</a></label>
             </div>
-            <div class="field">
+            <div class="field col-6">
                 <button class="button">Submit Form</button>
             </div>
         </div>
     </form>
+</main>
+
+
+
 
 
 
