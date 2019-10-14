@@ -1,43 +1,123 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inschrijfformulier 2020</title>
+<html lang="en">
 
-<!-- Wire CSS -->
-<link rel="stylesheet" href="https://npmcdn.com/wire.css/dist/wire.min.css" type="text/css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Wire CSS -->
+    <link rel="stylesheet" href="https://npmcdn.com/wire.css/dist/wire.min.css" type="text/css">
 </head>
+
 <body>
 
-<h1>Inschrijvingsformulier 2020</h1>
+    <h1>Inschrijvingsformulier 2020</h1>
 
-<form class="form">
-    <div class="row">
-        <div class="field" data-col="6">
-            <label for="firstname">Voornaam</label>
-            <input id="firstname" type="text" placeholder="Voornaam"/>
+    <form class="form" data-grid="column">
+        <!-- naamgegevens -->
+        <div class="row" id="naam" data-grid="row">
+            <div class="field" data-col="4">
+                <label for="voornaam">Voornaam</label>
+                <input id="voornaam" type="text" placeholder="Voornaam" />
+            </div>
+            <div class="field" data-col="4">
+                <label for="tussenvoegels">Tussenvoegels</label>
+                <input id="tussenvoegels" type="text" placeholder="Tussenvoegels" />
+            </div>
+            <div class="field" data-col="4">
+                <label for="achternaam">Achternaam</label>
+                <input id="achternaam" type="text" placeholder="Achternaam" />
+            </div>
         </div>
-        <div class="field" data-col="6">
-            <label for="tussenvoegels">tussenvoegels</label>
-            <input id="tussenvoegels" type="text" placeholder="Tussenvoegels"/>
+        <div class="row" data-grid="row">
+            <div class="col-6" data-grid="column">
+                <h2>Thuis adres</h2>
+                <div class="field">
+                    <label for="adres">Adres</label>
+                    <input id="adres" type="text" placeholder="Adres" />
+                </div>
+                <div class="field">
+                    <label for="postcode">Postcode</label>
+                    <input id="postcode" type="text" placeholder="Postcode" />
+                </div>
+                <div class="field">
+                    <label for="plaats">Woonplaats</label>
+                    <input id="plaats" type="text" placeholder="Woonplaats" />
+                </div>
+            </div>
+            <div class="col-6" data-grid="column">
+                <h2>School</h2>
+                <div class="field">
+                    <label for="naamschool">Naam School</label>
+                    <input id="naamschool" type="text" placeholder="Naam School" />
+                </div>
+                <div class="field">
+                    <label for="adresschool">Adres School</label>
+                    <input id="adresschool" type="text" placeholder="Adres School" />
+                </div>
+                <div class="field">
+                    <label for="postcodeschool">Postcode School</label>
+                    <input id="postcodeschool" type="text" placeholder="Postcode School" />
+                </div>
+                <div class="field">
+                    <label for="plaats">Plaats</label>
+                    <input id="plaats" type="text" placeholder="Plaats" />
+                </div>
+            </div>
         </div>
-        <div class="field" data-col="6">
-            <label for="lastname">Achternaam</label>
-            <input id="lastname" type="text" placeholder="Achternaam"/>
+        <div class="row" data-grid="row">
+            <div class="field" data-col="4">
+                <label for="emailadres">Emailadres</label>
+                <input id="emailadres" type="email" placeholder="Emailadres" />
+            </div>
+            <div class="field" data-col="4">
+                <label for="club">Club</label>
+                <input id="club" type="text" placeholder="Club" />
+            </div>
+            <div class="field" data-col="4">
+                <label for="leeftijd">Leeftijd</label>
+                <input id="leeftijd" type="date" placeholder="Leeftijd" />
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="field" data-col="6">
-
+        <div class="row" data-grid="row">
+            <div class="field" data-col="6">
+                <label for="options">Sport keuze</label>
+                <select name="options" id="options">
+                    <option value="" disabled selected>Maak u keuze</option>
+                    <option value="op1">Honkbal</option>
+                    <option value="op2">Softball</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <label for="options">Regio keuze</label>
+                <select name="options" id="options">
+                    <option value="" disabled selected>Maak u keuze</option>
+                    <option value="op1">Amsterdam</option>
+                    <option value="op2">Brabant</option>
+                    <option value="op3">Zeeland</option>
+                    <option value="op4">Den Haag</option>
+                    <option value="op5">Haarlem</option>
+                    <option value="op6">Midden Nederland</option>
+                    <option value="op7">Noord Nederland</option>
+                    <option value="op8">Noord-Holland</option>
+                    <option value="op9">Oost Nederland</option>
+                    <option value="op10">Rotterdam</option>
+                </select>
+            </div>
+            <div class="field">
+                <input type="checkbox" id="check"/>
+                <label for="check">Accept <a href="#form">Terms and Conditions</a></label>
+            </div>
+            <div class="field">
+                <button class="button">Submit Form</button>
+            </div>
         </div>
-    </div>
-
-</form> 
+    </form>
 
 
 
 
-<script src="https://npmcdn.com/wire.css/dist/wire.min.js"></script>
+    <script src="https://npmcdn.com/wire.css/dist/wire.min.js"></script>
 </body>
+
 </html>
