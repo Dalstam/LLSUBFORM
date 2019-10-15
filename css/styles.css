@@ -1,7 +1,27 @@
-main{
+main {
     margin: 0 auto;
     width: 90%;
 }
+
+select#sportCodeDropdown,
+select#yearDropdown,select#monthDropdown {
+    width: 45%;
+}
+
 .field {
-    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.row {
+    margin: 30px 0;
+}
+
+select {
+    padding: 3px 0;
+}
+
+#stap2 {
+    display: none;
 }
