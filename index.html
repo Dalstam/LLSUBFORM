@@ -21,8 +21,8 @@
                 <h2>Stap 1: Leeftijd en league.</h2>
                 <div class="row">
                     <div id="month" class="field" data-col="2">
-                        <label for="monthDropdown">Wat is je geboortemaand?</label>
-                        <select id="monthDropdown" data-role="month-dropdown">
+                        <label for="monthDropdown">Je geboortemaand</label>
+                        <select id="monthDropdown" name="geboortemaand" data-role="month-dropdown">
                             <option value=""></option>
                             <option value="1">januari</option>
                             <option value="2">februari</option>
@@ -39,8 +39,8 @@
                         </select>
                     </div>
                     <div id="year" class="field " data-col="2">
-                        <label for="yearDropdown">Wat is je geboortejaar?</label>
-                        <select id="yearDropdown" data-role="year-dropdown">
+                        <label for="yearDropdown">Je geboortejaar</label>
+                        <select id="yearDropdown" name="geboortejaar" data-role="year-dropdown">
                             <option value=""></option>
                             <option value="2019">2019</option>
                             <option value="2018">2018</option>
@@ -62,12 +62,11 @@
                             <option value="2002">2002</option>
                             <option value="2001">2001</option>
                             <option value="2000">2000</option>
-
                         </select>
                     </div>
                     <div id="sport" class="field" data-col="2">
-                        <label for="sportCodeDropdown">Welke sport doe je?</label>
-                        <select id="sportCodeDropdown" data-role="sport-code-dropdown">
+                        <label for="sportCodeDropdown">Kies je sport</label>
+                        <select id="sportCodeDropdown" name="sport" data-role="sport-code-dropdown">
                             <option value=""></option>
                             <option value="1">Baseball</option>
                             <option value="2">Softball</option>
@@ -83,15 +82,15 @@
                 <div class="row" id="naam">
                     <div class="field" data-col="2">
                         <label for="voornaam">Voornaam</label>
-                        <input id="voornaam" type="text" placeholder="" />
+                        <input id="voornaam" naam="Voornaam" type="text" placeholder="" />
                     </div>
                     <div class="field" data-col="2">
                         <label for="tussenvoegels">Tussenvoegels</label>
-                        <input id="tussenvoegels" type="text" placeholder="" />
+                        <input id="tussenvoegels" name="Tussenvoegels" type="text" placeholder="" />
                     </div>
                     <div class="field" data-col="2">
                         <label for="achternaam">Achternaam</label>
-                        <input id="achternaam" type="text" placeholder="" />
+                        <input id="achternaam"name="Achternaam" type="text" placeholder="" />
                     </div>
                 </div>
 
@@ -102,15 +101,15 @@
                             <h3>Thuis adres</h3>
                             <div class="field">
                                 <label for="adres">Adres</label>
-                                <input id="adres" type="text" placeholder="" />
+                                <input id="adres" name="Adres_thuis" type="text" placeholder="" />
                             </div>
                             <div class="field">
                                 <label for="postcode">Postcode</label>
-                                <input id="postcode" type="text" placeholder="" />
+                                <input id="postcode" name="Postcode_thuis" type="text" placeholder="" />
                             </div>
                             <div class="field">
                                 <label for="plaats">Woonplaats</label>
-                                <input id="plaats" type="text" placeholder="" />
+                                <input id="plaats" name="Woonplaats_thuis"type="text" placeholder="" />
                             </div>
                         </div>
                         <!-- School gegevens -->
@@ -118,19 +117,19 @@
                             <h3>School adres</h3>
                             <div class="field">
                                 <label for="naamschool">Naam School</label>
-                                <input id="naamschool" type="text" placeholder="" />
+                                <input id="naamschool" name="School" type="text" placeholder="" />
                             </div>
                             <div class="field">
                                 <label for="adresschool">Adres School</label>
-                                <input id="adresschool" type="text" placeholder="" />
+                                <input id="adresschool" name="Adres_school" type="text" placeholder="" />
                             </div>
                             <div class="field">
                                 <label for="postcodeschool">Postcode School</label>
-                                <input id="postcodeschool" type="text" placeholder="" />
+                                <input id="postcodeschool" name="Postcode_school"type="text" placeholder="" />
                             </div>
                             <div class="field">
-                                <label for="plaats">Plaats</label>
-                                <input id="plaats" type="text" placeholder="" />
+                                <label for="schoolplaats">Plaats School</label>
+                                <input id="schoolplaats" name="plaats_school" type="text" placeholder="" />
                             </div>
                         </div>
                     </div>
@@ -141,15 +140,15 @@
                 <div id="email" class="row">
                     <div class="field" data-col="2">
                         <label for="emailadres">Emailadres</label>
-                        <input id="emailadres" type="email" placeholder="" />
+                        <input id="emailadres" name="Emailadres" type="email" placeholder="" />
                     </div>
                     <div class="field" data-col="2">
                         <label for="club">Club</label>
-                        <input id="club" type="text" placeholder="" />
+                        <input id="club" name="club" type="text" placeholder="" />
                     </div>
                     <div class="field" data-col="2">
                             <label for="regio">In welke regio speel je?</label>
-                            <select name="regio" id="regio">
+                            <select name="regio" name="regio" id="regio">
                                 <option value="" disabled selected></option>
                                 <option value="op1">Amsterdam</option>
                                 <option value="op2">Brabant</option>
@@ -162,20 +161,21 @@
                                 <option value="op9">Oost Nederland</option>
                                 <option value="op10">Rotterdam</option>
                             </select>
+                            <div id="regioFind" class="">Vind je regio hier</div>
                         </div>
 
                 </div>
 
                 <!-- Regio keuze -->
-                <div data-grid="row">
-
+                <div id="regioMap" data-grid="column">
+                        <style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="KNBSB Little League regio's" src="//www.arcgis.com/apps/Embed/index.html?webmap=a8a694eaf7f8452194efaf0281cbf228&extent=-1.4423,50.6895,10.2471,54.0675&zoom=true&previewImage=false&scale=false&search=true&searchextent=true&disable_scroll=true&theme=light"></iframe></div>
                 </div>
 
                 <!-- check box -->
                 <div class="row" data-grid="column">
                     <div class="">
-                        <input type="checkbox" id="check" />
-                        <label for="check"> <a href="#form">Voorwaarden en avg accepteren</a></label>
+                        <label for="avg_check"> <a href="#form">Voorwaarden en avg accepteren</a></label>
+                        <input type="checkbox" id="avg_check" required />
                     </div>
                     <!-- recaptcha div -->
                     <div data-netlify-recaptcha="true"></div>
@@ -187,12 +187,13 @@
             </div>
         </form>
     </main>
+   
+          
+           
+ 
 
 
-
-
-
-
+ 
 
     <script src="https://npmcdn.com/wire.css/dist/wire.min.js"></script>
     <script>
