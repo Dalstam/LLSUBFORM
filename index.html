@@ -66,7 +66,7 @@
                     </div>
                     <div id="sport" class="field" data-col="2">
                         <label for="sportCodeDropdown">Kies je sport</label>
-                        <select id="sportCodeDropdown" name="sport" data-role="sport-code-dropdown">
+                        <select id="sportCodeDropdown"  data-role="sport-code-dropdown">
                             <option value=""></option>
                             <option value="1">Baseball</option>
                             <option value="2">Softball</option>
@@ -74,6 +74,8 @@
                     </div>
                 </div>
                 <div class="field" data-role="league-age-result"></div>
+                <input id="bb_sb" class="hidden"  name="bb_sb" type="text" />
+                <input id="league" class="hidden" name="league" type="text"/>
             </div>
 
             <div id="stap2">
@@ -82,7 +84,7 @@
                 <div class="row" id="naam">
                     <div class="field" data-col="2">
                         <label for="voornaam">Voornaam</label>
-                        <input id="voornaam" naam="Voornaam" type="text" placeholder="" />
+                        <input id="voornaam" name="Voornaam" type="text" placeholder="" />
                     </div>
                     <div class="field" data-col="2">
                         <label for="tussenvoegels">Tussenvoegels</label>
@@ -166,7 +168,6 @@
                      </div>
                 </div>
 
-            
 
                 <!-- check box -->
                 <div class="row" data-grid="column">
@@ -253,8 +254,12 @@
 
                 if (sportCode == 1) {
                     sportType ="Baseball";
+          
+                 
                 } else {
                     sportType=" Softball";
+                    
+                   
                 }
 
 
@@ -284,7 +289,8 @@
                       
                 }
                 console.log(leaguePlay + " " + leagueAge + " " + sportCode);
-
+               $('#league').val(leaguePlay);
+               $("#bb_sb").val(sportType);
                 // is alleen bij honkbal
 
 
