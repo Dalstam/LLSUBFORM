@@ -74,8 +74,9 @@
                     </div>
                 </div>
                 <div class="field" data-role="league-age-result"></div>
+                <input id="leeftijd" class="hidden"  name="Leeftijd" type="text" />
                 <input id="bb_sb" class="hidden"  name="bb_sb" type="text" />
-                <input id="league" class="hidden" name="league" type="text"/>
+                <input id="league" class="hidden" name="League" type="text"/>
                 
             </div>
 
@@ -264,35 +265,37 @@
 
 
                 if (leagueAge > 9 && leagueAge < 13) {
-                    leaguePlay = "Littles"
+                    leaguePlay = "Little league"
            
                 }
                 if ((leagueAge > 11 && leagueAge < 14) && sportCode == 1) {
-                    leaguePlay = "Intermediates"
+                    leaguePlay = "Intermediate league"
                  
                 }
                 if (leagueAge > 12 && leagueAge < 15) {
-                    leaguePlay = "Juniors"
+                    leaguePlay = "Junior league"
                      
                 }
                 if (leagueAge > 14 && leagueAge < 17) {
-                    leaguePlay = "Seniors"
+                    leaguePlay = "Senior league"
                       
                 }
                 // is alleen bij honkbal
                 if (leagueAge == 13 && sportCode == 1) {
-                    leaguePlay = "Intermediates of Juniors"
+                    leaguePlay = "Intermediate of Junior league"
                    
                 }
                 if ((leagueAge == 11 || leagueAge == 12) && sportCode == 1) {
-                    leaguePlay = "Littles of Intermediates"
+                    leaguePlay = "Little of Intermediate league"
                       
                 }
                 console.log(leaguePlay + " " + leagueAge + " " + sportCode);
+          
+                // is alleen bij honkbal
+                // zet info in de hiddenfields
+                $("#leeftijd").val(LeagueAge);
                $('#league').val(leaguePlay);
                $("#bb_sb").val(sportType);
-                // is alleen bij honkbal
-
 
                 if (leagueAge != null && leagueAge > 9) {
                     $leagueAgeResult.append($('<p>').html('Je kunt je inschrijven voor het NK Little League 2020. Volgens de little league leeftijd ben je <b>' + leagueAge + '</b> jaar oud. <br> Je kunt meespelen in de <b>'+leaguePlay+' '+ sportType +"<b"));
