@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>Inschrijfformulier NK Little League 2020</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -18,7 +19,7 @@
         <form class="inschrijfformulier" method="POST" data-netlify-recaptcha="true" data-netlify="true">
             <!-- agecalculator -->
             <div id="agecalculator" data-grid="column">
-                <h2>Stap 1: Leeftijd en league.</h2>
+                <h2>Stap 1: Bepaal je leeftijd en league.</h2>
                 <div class="row">
                     <div id="month" class="field" data-col="2">
                         <label for="monthDropdown">Je geboortemaand</label>
@@ -42,10 +43,6 @@
                         <label for="yearDropdown">Je geboortejaar</label>
                         <select id="yearDropdown" name="geboortejaar" data-role="year-dropdown">
                             <option value=""></option>
-                            <option value="2019">2019</option>
-                            <option value="2018">2018</option>
-                            <option value="2017">2017</option>
-                            <option value="2016">2016</option>
                             <option value="2015">2015</option>
                             <option value="2014">2014</option>
                             <option value="2013">2013</option>
@@ -66,7 +63,7 @@
                     </div>
                     <div id="sport" class="field" data-col="2">
                         <label for="sportCodeDropdown">Kies je sport</label>
-                        <select id="sportCodeDropdown"  data-role="sport-code-dropdown">
+                        <select id="sportCodeDropdown" data-role="sport-code-dropdown">
                             <option value=""></option>
                             <option value="1">Baseball</option>
                             <option value="2">Softball</option>
@@ -75,11 +72,12 @@
                 </div>
                 <div class="field" data-role="league-age-result"></div>
 
+
             </div>
 
             <div id="stap2">
-                <h2>Stap 2: Inschrijven voor het NK Little League.</h2>
-                <!-- naamgegevens -->
+                <h2>Stap 2 inschrijven voor het NK Little League programma.</h2>
+               <!-- naamgegevens -->
                 <div class="row" id="naam">
                     <div class="field" data-col="2">
                         <label for="voornaam">Voornaam</label>
@@ -91,7 +89,12 @@
                     </div>
                     <div class="field" data-col="2">
                         <label for="achternaam">Achternaam</label>
-                        <input id="achternaam"name="Achternaam" type="text" placeholder="" />
+                        <input id="achternaam" name="Achternaam" type="text" placeholder="" />
+                    </div>
+
+                    <div class="field">
+                        <label for="geboortedatum">Geboortedatum</label>
+                        <input type="date" name="geboortedatum" id="Geboortedatum" value="2017-06-01">
                     </div>
                 </div>
 
@@ -110,8 +113,9 @@
                             </div>
                             <div class="field">
                                 <label for="plaats">Woonplaats</label>
-                                <input id="plaats" name="Woonplaats_thuis"type="text" placeholder="" />
+                                <input id="plaats" name="Woonplaats_thuis" type="text" placeholder="" />
                             </div>
+
                         </div>
                         <!-- School gegevens -->
                         <div data-col="4" data-grid="column">
@@ -126,7 +130,7 @@
                             </div>
                             <div class="field">
                                 <label for="postcodeschool">Postcode School</label>
-                                <input id="postcodeschool" name="Postcode_school"type="text" placeholder="" />
+                                <input id="postcodeschool" name="Postcode_school" type="text" placeholder="" />
                             </div>
                             <div class="field">
                                 <label for="schoolplaats">Plaats School</label>
@@ -148,48 +152,53 @@
                         <input id="club" name="club" type="text" placeholder="" />
                     </div>
                     <div class="field" data-col="2">
-                            <label for="regio">In welke regio speel je?</label>
-                            <select name="regio" name="regio" id="regio">
-                                <option value="" disabled selected></option>
-                                <option value="Amsterdam">Amsterdam</option>
-                                <option value="Brabant/Zeeland">Brabant/Zeeland</option>
-                                <option value="Den Haag">Den Haag</option>
-                                <option value="Haarlem">Haarlem</option>
-                                <option value="Midden Nederland">Midden Nederland</option>
-                                <option value="Noord Nederland">Noord Nederland</option>
-                                <option value="Noord-Holland">Noord-Holland</option>
-                                <option value="Oost Nederland">Oost Nederland</option>
-                                <option value="Rotterdam">Rotterdam</option>
-                            </select>
+                        <label for="regio">In welke regio speel je?</label>
+                        <select name="regio" name="regio" id="regio">
+                            <option value="" disabled selected></option>
+                            <option value="Amsterdam">Amsterdam</option>
+                            <option value="Brabant/Zeeland">Brabant/Zeeland (Brabant West)</option>
+                            <option value="Den Haag">Den Haag</option>
+                            <option value="Haarlem">Haarlem</option>
+                            <option value="Midden Nederland">Midden Nederland</option>
+                            <option value="Noord Nederland">Noord</option>
+                            <option value="Noord-Holland">Noord-Holland</option>
+                            <option value="Oost Nederland">Oost </option>
+                            <option value="Rotterdam">Rotterdam</option>
+                            <option value="Zuid Nederland">Zuid Nederland (Brabant oost / Limburg)</option>
+                        </select>
 
-                            <a href="https://arcg.is/09Kb00" target="_blank" rel="noopener noreferrer">Vind je regio hier</a>
-                     </div>
+                        <a href="https://arcg.is/09Kb00" target="_blank" rel="noopener noreferrer">Vind je regio
+                            hier</a>
+                    </div>
                 </div>
 
 
                 <!-- check box -->
-                <div class="row" data-grid="column">
-                    <div class="">
-                        <label for="avg_check"> <a href="#form">Voorwaarden en avg accepteren</a></label>
-                        <input type="checkbox" id="avg_check" required />
-                    </div>
+
+                        <div class="row " data-grid="va-center">
+                                <input type="checkbox" id="avg_check" required />
+                                <label for="avg_check" name="avg_check">   Hierbij geef ik toestemmming dat:</label>
+                                <ul>
+                                        <li>de door mij ingevulde gegevens gebruikt kunnen worden ten behoeve van communicatie doeleinden voor deelname aan het NK Little League programma.</li>
+                                        <li>foto en filmmateriaal die gemaakt worden, tijdens gerelateerde NK Little League evenmenten,  gebruikt kan worden voor communicatie doeleinden ten behoeve van het NK Little League programma.</li>
+                                    </ul>
+                            </div>
+
+
+
                     <!-- recaptcha div -->
-                    <div data-netlify-recaptcha="true"></div>
+                    <div data-netlify-recaptcha="true" class="row"  ></div>
                     <!-- submit button -->
-                    <div class="">
+                    <div class="row">
                         <button class="button">Inschrijven</button>
                     </div>
                 </div>
             </div>
-            <input id="leeftijd" class="hidden"  name="Leeftijd" type="text" />
-            <input id="bb_sb" class="hidden"  name="bb_sb" type="text" />
+            <input id="leeftijd" class="hidden" name="Leeftijd" type="text" />
+            <input id="bb_sb" class="hidden" name="bb_sb" type="text" />
             <input id="league" class="hidden" name="League" type="text" />
         </form>
     </main>
-
-
-
-
 
 
 
@@ -250,65 +259,82 @@
                         && e.Month == parseInt(month);
                 });
                 var leagueAge = grepResult.length > 0 ? grepResult[0].LeagueAge : null;
-                var leaguePlay ="nvt";
+                var leaguePlay = "nvt";
                 var sportType;
 
                 if (sportCode == 1) {
-                    sportType ="Baseball";
-
-
+                    sportType = "Baseball";
                 } else {
-                    sportType=" Softball";
-
-
+                    sportType = " Softball";
                 }
 
-
-                if (leagueAge > 9 && leagueAge < 13) {
-                    leaguePlay = "Little league"
-
+                switch (leagueAge) {
+                    case 10:
+                        leaguePlay = "Little league";
+                        break;
+                    case 11:
+                        if (sportCode == 2) {
+                            leaguePlay = "Little";
+                        } else {
+                            leaguePlay = "Little of Intermediate league";
+                        }
+                        break;
+                    case 12:
+                        if (sportCode == 2) {
+                            leaguePlay = "Little of Junior league";
+                        } else {
+                            leaguePlay = "Little, Intermediate of Junior league";
+                        }
+                        break;
+                    case 13:
+                        if (sportCode == 2) {
+                            leaguePlay = "Junior of Senior league";
+                        } else {
+                            leaguePlay = "Intermediate, Junior of Senior league";
+                        }
+                        break;
+                    case 14:
+                        leaguePlay = "Junior of Senior league";
+                        break
+                    case 15:
+                        leaguePlay =  "Senior league";
+                        break;
+                    case 16:
+                        leaguePlay = "Senior league";
+                        break;
+                    default:
+                        leaguePlay = "Training, geen NK";
+                        break;
                 }
-                if ((leagueAge > 11 && leagueAge < 14) && sportCode == 1) {
-                    leaguePlay = "Intermediate league"
 
-                }
-                if (leagueAge > 12 && leagueAge < 15) {
-                    leaguePlay = "Junior league"
-
-                }
-                if (leagueAge > 14 && leagueAge < 17) {
-                    leaguePlay = "Senior league"
-
-                }
-                // is alleen bij honkbal
-                if (leagueAge == 13 && sportCode == 1) {
-                    leaguePlay = "Intermediate of Junior league"
-
-                }
-                if ((leagueAge == 11 || leagueAge == 12) && sportCode == 1) {
-                    leaguePlay = "Little of Intermediate league"
-
-                }
                 console.log(leaguePlay + " " + leagueAge + " " + sportCode);
 
                 // is alleen bij honkbal
                 // zet info in de hiddenfields
                 $("#leeftijd").val(leagueAge);
-               $('#league').val(leaguePlay);
-               $("#bb_sb").val(sportType);
+                $('#league').val(leaguePlay);
+                $("#bb_sb").val(sportType);
 
                 if (leagueAge != null && leagueAge > 9) {
-                    $leagueAgeResult.append($('<p>').html('Je kunt je inschrijven voor het NK Little League 2020. Volgens de little league leeftijd ben je <b>' + leagueAge + '</b> jaar oud. <br> Je kunt meespelen in de <b>'+leaguePlay+' '+ sportType +"<b"));
+                    $leagueAgeResult.append($('<p>').html('Volgens de little league leeftijd ben je <b>' + leagueAge + '</b> jaar oud. Je kunt je inschrijven voor het NK Little League 2020 in de <b>' + leaguePlay + ' ' + sportType + "</b>."));
+
                     $('#stap2').show();
+
+                }
+                else if (leagueAge != null && leagueAge < 10){
+                   $leagueAgeResult.append($('<p>').html('Volgens de little league leeftijd ben je <b>' + leagueAge + '</b> jaar oud. Helaas voldoe je niet aan de Little League leeftijdseis om mee te doen aan het NK. Je kunt wel meedoen aan het Little League trainingsprogramma in je regio. <br>Voor meer informatie over de leeftijdseisen kijk <a href=\"https://www.nklittleleague.nl/l/page/ik_wil_meedoen_met_de_little_league.html\" target=\"_blank\">op onze website.</a> Of bekijk de officiële Little League agecharts: <a href=\"https://www.littleleague.org/downloads/2020-baseball-age-chart/\" target=\"_blank\">Baseball</a> en <a href=\"https://www.littleleague.org/downloads/2020-softball-age-chart\" target=\"_blank\">Softball</a>'));
+
+                  $('#stap2').show();
                 }
                 else {
-                    $leagueAgeResult.append($('<p>').text('Helaas voldoe je niet aan de Little League leeftijd. Je kunt je jammer genoeg niet inschrijven.'));
+                    $leagueAgeResult.append($('<p>').html('Helaas voldoe je niet aan de Little League leeftijdseis. Je kunt je jammer genoeg niet inschrijven voor het NK Little League.<br>Voor meer informatie over de leeftijdseisen kijk <a href=\"https://www.nklittleleague.nl/l/page/ik_wil_meedoen_met_de_little_league.html\" target=\"_blank\">op onze website.</a> Of bekijk de officiële Little League agecharts: <a href=\"https://www.littleleague.org/downloads/2020-baseball-age-chart/\" target=\"_blank\">Baseball</a> en <a href=\"https://www.littleleague.org/downloads/2020-softball-age-chart\" target=\"_blank\">Softball</a>.'));
                     $('#stap2').hide();
                 }
+
+
             }
         }
     </script>
-
 
 </body>
 
