@@ -161,7 +161,7 @@
                                 <option value="Oost Nederland">Oost Nederland</option>
                                 <option value="Rotterdam">Rotterdam</option>
                             </select>
-                            
+
                             <a href="https://arcg.is/09Kb00" target="_blank" rel="noopener noreferrer">Vind je regio hier</a>
                      </div>
                 </div>
@@ -186,13 +186,13 @@
             <input id="league" class="hidden" name="League" type="text" />
         </form>
     </main>
-   
-          
-           
- 
 
 
- 
+
+
+
+
+
 
     <script src="https://npmcdn.com/wire.css/dist/wire.min.js"></script>
     <script>
@@ -255,42 +255,42 @@
 
                 if (sportCode == 1) {
                     sportType ="Baseball";
-          
-                 
+
+
                 } else {
                     sportType=" Softball";
-                    
-                   
+
+
                 }
 
 
                 if (leagueAge > 9 && leagueAge < 13) {
                     leaguePlay = "Little league"
-           
+
                 }
                 if ((leagueAge > 11 && leagueAge < 14) && sportCode == 1) {
                     leaguePlay = "Intermediate league"
-                 
+
                 }
                 if (leagueAge > 12 && leagueAge < 15) {
                     leaguePlay = "Junior league"
-                     
+
                 }
                 if (leagueAge > 14 && leagueAge < 17) {
                     leaguePlay = "Senior league"
-                      
+
                 }
                 // is alleen bij honkbal
                 if (leagueAge == 13 && sportCode == 1) {
                     leaguePlay = "Intermediate of Junior league"
-                   
+
                 }
                 if ((leagueAge == 11 || leagueAge == 12) && sportCode == 1) {
                     leaguePlay = "Little of Intermediate league"
-                      
+
                 }
                 console.log(leaguePlay + " " + leagueAge + " " + sportCode);
-          
+
                 // is alleen bij honkbal
                 // zet info in de hiddenfields
                 $("#leeftijd").val(leagueAge);
