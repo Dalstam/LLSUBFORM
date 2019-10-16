@@ -10,7 +10,9 @@ select#sportCodeDropdown,
 select#yearDropdown,select#monthDropdown {
     width: 71%;
 }
-
+ul{
+    margin:0;
+}
 .field {
     display: flex;
     flex-direction: column;
