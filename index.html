@@ -18,9 +18,9 @@
         <h1>Inschrijfformulier NK Little League 2020</h1>
         <form class="inschrijfformulier" method="POST" action="succes.html" data-netlify-recaptcha="true" data-netlify="true">
             <!-- agecalculator -->
-            <div id="agecalculator" data-grid="column">
+            <div class="steps" id="agecalculator" data-grid="column va-center">
                 <h2>Stap 1: Bepaal je leeftijd en league.</h2>
-                <div class="row">
+                <div class="row" data-grid="row center-center">
                     <div id="month" class="field" data-col="2">
                         <label for="monthDropdown">Je geboortemaand</label>
                         <select id="monthDropdown" name="geboortemaand" data-role="month-dropdown">
@@ -75,7 +75,7 @@
 
             </div>
 
-            <div id="stap2">
+            <div id="stap2" class="steps" data-grid="column">
                 <h2>Stap 2: Inschrijven.</h2>
                <!-- naamgegevens -->
                 <div class="row" id="naam">
@@ -185,13 +185,16 @@
                             </div>
 
 
+<div class="row">
+ <!-- recaptcha div -->
+ <div data-netlify-recaptcha="true" data-col="6" ></div>
+ <!-- <button class="button">Inschrijven</button> -->
+ <!-- submit button -->
 
-                    <!-- recaptcha div -->
-                    <div data-netlify-recaptcha="true" class="row"  ></div>
-                    <!-- submit button -->
-                    <div class="row">
-                        <button class="button">Inschrijven</button>
-                    </div>
+     <button class="button" data-col="6" >Inschrijven</button>
+
+</div>
+
                 </div>
             </div>
             <input id="leeftijd" class="hidden" name="Leeftijd" type="text" />
@@ -274,7 +277,7 @@
                         break;
                     case 11:
                         if (sportCode == 2) {
-                            leaguePlay = "Little";
+                            leaguePlay = "Little league";
                         } else {
                             leaguePlay = "Little of Intermediate league";
                         }
