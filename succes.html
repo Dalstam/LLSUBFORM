@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://npmcdn.com/wire.css/dist/wire.min.css" type="text/css">
+    <title>Bedankt_voor_je_inschrijving</title>
 </head>
+<style>
+    .rotate {
+        animation: rotation 3.5s infinite linear
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(359deg);
+        }
+    }
+</style>
+
 <body>
+    <main data-grid="center-center">
+        <img class="rotate fixed" src="/img/NKLL_logo.png">
+    </main>
+
+    <script async src="https://npmcdn.com/wire.css/dist/wire.min.js"></script>
+
     <script type="text/javascript">
-        window.location = "https://www.nklittleleague.nl/l/page/bedankt_voor_je_inschrijving.html";
+        setTimeout(() => {
+            window.location = "https://www.nklittleleague.nl/l/page/bedankt_voor_je_inschrijving.html";
+        }, 1500);
     </script>
 </body>
+
 </html>
