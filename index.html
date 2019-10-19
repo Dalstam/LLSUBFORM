@@ -15,7 +15,7 @@
 
 <body>
     <main>
-        <h1>Inschrijfformulier NK Little League 2020</h1>
+        <h1 class="ta-center">Inschrijfformulier NK Little League 2020</h1>
         <form class="inschrijfformulier" method="POST" action="succes.html" data-netlify-recaptcha="true" data-netlify="true">
             <!-- agecalculator -->
             <div class="steps" id="agecalculator" data-grid="column va-center">
@@ -76,10 +76,10 @@
             </div>
 
             <div id="stap2" class="steps" data-grid="column">
-                <h2>Stap 2: Inschrijven.</h2>
+                <h2  class="ta-center" >Stap 2: Inschrijven.</h2>
                <!-- naamgegevens -->
-                <div class="row" id="naam">
-                    <div class="field" data-col="2">
+                <div class="row" id="naam" >
+                    <div class="field" data-col=4">
                         <label for="voornaam">Voornaam</label>
                         <input id="voornaam" name="Voornaam" type="text" placeholder="" />
                     </div>
@@ -87,21 +87,21 @@
                         <label for="tussenvoegels">Tussenvoegels</label>
                         <input id="tussenvoegels" name="Tussenvoegels" type="text" placeholder="" />
                     </div>
-                    <div class="field" data-col="2">
+                    <div class="field" data-col="4">
                         <label for="achternaam">Achternaam</label>
                         <input id="achternaam" name="Achternaam" type="text" placeholder="" />
                     </div>
 
-                    <div class="field">
+                    <div class="field" data-col="2">
                         <label for="geboortedatum">Geboortedatum</label>
                         <input type="date" name="geboortedatum" id="Geboortedatum" value="2017-06-01">
                     </div>
                 </div>
 
                 <!-- Adres gegevens -->
-                <div class="row" data-grid="column">
-                    <div data-grid="row">
-                        <div data-col="4" data-grid="column">
+
+                    <div class="row">
+                        <div data-col="5" data-grid="column">
                             <h3>Thuis adres</h3>
                             <div class="field">
                                 <label for="adres">Adres</label>
@@ -117,8 +117,11 @@
                             </div>
 
                         </div>
+                        <div data-col="1" data-grid="column">
+
+                            </div>
                         <!-- School gegevens -->
-                        <div data-col="4" data-grid="column">
+                        <div data-col="5" data-grid="column">
                             <h3>School adres</h3>
                             <div class="field">
                                 <label for="naamschool">Naam School</label>
@@ -137,21 +140,21 @@
                                 <input id="schoolplaats" name="plaats_school" type="text" placeholder="" />
                             </div>
                         </div>
-                    </div>
+
 
                 </div>
 
                 <!-- email en club -->
-                <div id="email" class="row">
-                    <div class="field" data-col="2">
+                <div id="email" class="row" >
+                    <div class="field" data-col="4">
                         <label for="emailadres">Emailadres</label>
                         <input id="emailadres" name="Emailadres" type="email" placeholder="" />
                     </div>
-                    <div class="field" data-col="2">
+                    <div class="field" data-col="4">
                         <label for="club">Club</label>
                         <input id="club" name="club" type="text" placeholder="" />
                     </div>
-                    <div class="field" data-col="2">
+                    <div class="field" data-col="3">
                         <label for="regio">In welke regio speel je?</label>
                         <select name="regio" name="regio" id="regio">
                             <option value="" disabled selected></option>
