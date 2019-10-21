@@ -3,7 +3,7 @@
 body {
     background-color: #E5E5E5;
     font-family: 'Varela Round', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 main {
@@ -68,22 +68,53 @@ ul {
     text-align: center;
 }
 
+#logNK {
+    padding: 2%;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.logoNK {
+    height: 150px;
+}
+
+.rotate {
+    animation: rotation 3.5s infinite linear
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+
+#bedankt {
+    display: none;
+}
+
 /* desktop */
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
     body {
-        font-size: initial;
+        font-size: 1.6rem;
     }
 
     h1 {
-        font-size: initial;
+        font-size: 3.6rem;
     }
 
     h2 {
-        font-size: initial;
+        font-size: 2.6rem;
     }
 
     h3 {
-        font-size: initial;
+        font-size: 2.4rem;
     }
 
     select {
