@@ -15,11 +15,23 @@
 
 <body>
     <main>
-        <h1 class="ta-center">Inschrijfformulier NK Little League 2020</h1>
-        <form class="inschrijfformulier" method="POST" action="succes.html" data-netlify-recaptcha="true" data-netlify="true">
+
+        <header>
+            <img src="./img/Webbanner.png" alt="NK Little League 2020 logo">
+            <div class="ta-center">
+                <h1>NK Little League 2020</h1>
+                <h1>Inschrijfformulier </h1>
+
+                </p>
+        </header>
+
+        </div>
+
+        <form class="inschrijfformulier" method="POST" action="/succes.html" data-netlify-recaptcha="true"
+            data-netlify="true">
             <!-- agecalculator -->
             <div class="steps" id="agecalculator" data-grid="column va-center">
-                <h2>Stap 1: Bepaal je leeftijd en league.</h2>
+                <h2 class="ta-center">Stap 1: Bepaal je leeftijd en league.</h2>
                 <div class="row" data-grid="row center-center">
                     <div id="month" class="field" data-col="2">
                         <label for="monthDropdown">Je geboortemaand</label>
@@ -76,83 +88,87 @@
             </div>
 
             <div id="stap2" class="steps" data-grid="column">
-                <h2  class="ta-center" >Stap 2: Inschrijven.</h2>
-               <!-- naamgegevens -->
-                <div class="row" id="naam" >
-                    <div class="field" data-col=4">
+                <h2 class="ta-center">Stap 2: Inschrijven.</h2>
+                <!-- naamgegevens -->
+                <div class="row" id="naam">
+                    <div class="field" data-col="4">
                         <label for="voornaam">Voornaam</label>
-                        <input id="voornaam" name="Voornaam" type="text" placeholder="" />
+                        <input required id="voornaam" name="Voornaam" type="text" placeholder="" />
                     </div>
                     <div class="field" data-col="2">
                         <label for="tussenvoegels">Tussenvoegels</label>
-                        <input id="tussenvoegels" name="Tussenvoegels" type="text" placeholder="" />
+                        <input required id="tussenvoegels" name="Tussenvoegels" type="text" placeholder="" />
                     </div>
                     <div class="field" data-col="4">
                         <label for="achternaam">Achternaam</label>
-                        <input id="achternaam" name="Achternaam" type="text" placeholder="" />
+                        <input required id="achternaam" name="Achternaam" type="text" placeholder="" />
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="field" data-col="4">
+                        <label for="emailadres">Emailadres</label>
+                        <input required id="emailadres" name="Emailadres" type="email" placeholder="" />
                     </div>
 
                     <div class="field" data-col="2">
                         <label for="geboortedatum">Geboortedatum</label>
-                        <input type="date" name="geboortedatum" id="Geboortedatum" value="2017-06-01">
+                        <input required type="date" name="geboortedatum" id="Geboortedatum"
+                            (0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}>
                     </div>
                 </div>
 
                 <!-- Adres gegevens -->
 
-                    <div class="row">
-                        <div data-col="5" data-grid="column">
-                            <h3>Thuis adres</h3>
-                            <div class="field">
-                                <label for="adres">Adres</label>
-                                <input id="adres" name="Adres_thuis" type="text" placeholder="" />
-                            </div>
-                            <div class="field">
-                                <label for="postcode">Postcode</label>
-                                <input id="postcode" name="Postcode_thuis" type="text" placeholder="" />
-                            </div>
-                            <div class="field">
-                                <label for="plaats">Woonplaats</label>
-                                <input id="plaats" name="Woonplaats_thuis" type="text" placeholder="" />
-                            </div>
-
+                <div class="row">
+                    <div data-col="5" data-grid="column">
+                        <h3 class="ta-center">Thuis adres</h3>
+                        <div class="field">
+                            <label for="adres">Adres</label>
+                            <input required id="adres" name="Adres_thuis" type="text" placeholder="" />
                         </div>
-                        <div data-col="1" data-grid="column">
-
-                            </div>
-                        <!-- School gegevens -->
-                        <div data-col="5" data-grid="column">
-                            <h3>School adres</h3>
-                            <div class="field">
-                                <label for="naamschool">Naam School</label>
-                                <input id="naamschool" name="School" type="text" placeholder="" />
-                            </div>
-                            <div class="field">
-                                <label for="adresschool">Adres School</label>
-                                <input id="adresschool" name="Adres_school" type="text" placeholder="" />
-                            </div>
-                            <div class="field">
-                                <label for="postcodeschool">Postcode School</label>
-                                <input id="postcodeschool" name="Postcode_school" type="text" placeholder="" />
-                            </div>
-                            <div class="field">
-                                <label for="schoolplaats">Plaats School</label>
-                                <input id="schoolplaats" name="plaats_school" type="text" placeholder="" />
-                            </div>
+                        <div class="field">
+                            <label for="postcode">Postcode</label>
+                            <input required id="postcode" name="Postcode_thuis" type="text" placeholder="" />
                         </div>
+                        <div class="field">
+                            <label for="plaats">Woonplaats</label>
+                            <input required id="plaats" name="Woonplaats_thuis" type="text" placeholder="" />
+                        </div>
+
+                    </div>
+                    <!-- <div data-col="1" data-grid="column">
+
+                            </div> -->
+                    <!-- School gegevens -->
+                    <div data-grid="column" data-col="5">
+                        <h3 class="ta-center">School adres</h3>
+                        <div class="field">
+                            <label for="naamschool">Naam School</label>
+                            <input required id="naamschool" name="School" type="text" placeholder="" />
+                        </div>
+                        <div class="field">
+                            <label for="adresschool">Adres School</label>
+                            <input required id="adresschool" name="Adres_school" type="text" placeholder="" />
+                        </div>
+                        <div class="field">
+                            <label for="postcodeschool">Postcode School</label>
+                            <input required id="postcodeschool" name="Postcode_school" type="text" placeholder="" />
+                        </div>
+                        <div class="field">
+                            <label for="schoolplaats">Plaats School</label>
+                            <input required id="schoolplaats" name="plaats_school" type="text" placeholder="" />
+                        </div>
+                    </div>
 
 
                 </div>
 
                 <!-- email en club -->
-                <div id="email" class="row" >
-                    <div class="field" data-col="4">
-                        <label for="emailadres">Emailadres</label>
-                        <input id="emailadres" name="Emailadres" type="email" placeholder="" />
-                    </div>
+                <div id="email" class="row">
                     <div class="field" data-col="4">
                         <label for="club">Club</label>
-                        <input id="club" name="club" type="text" placeholder="" />
+                        <input required id="club" name="club" type="text" placeholder="" />
                     </div>
                     <div class="field" data-col="3">
                         <label for="regio">In welke regio speel je?</label>
@@ -178,31 +194,36 @@
 
                 <!-- check box -->
 
-                        <div class="row " data-grid="va-center">
-                                <input type="checkbox" id="avg_check" required />
-                                <label for="avg_check" name="avg_check">   Hierbij geef ik toestemmming dat:</label>
-                                <ul>
-                                        <li>de door mij ingevulde gegevens gebruikt kunnen worden ten behoeve van communicatie doeleinden voor deelname aan het NK Little League programma.</li>
-                                        <li>foto en filmmateriaal die gemaakt worden, tijdens gerelateerde NK Little League evenmenten,  gebruikt kan worden voor communicatie doeleinden ten behoeve van het NK Little League programma.</li>
-                                    </ul>
-                            </div>
+                <div class="row " data-grid="va-center">
+                    <input required type="checkbox" id="avg_check" required />
+                    <label for="avg_check" name="avg_check"> Hierbij geef ik toestemmming dat:</label>
+                    <ul>
+                        <li>de door mij ingevulde gegevens gebruikt kunnen worden ten behoeve van communicatie
+                            doeleinden voor deelname aan het NK Little League programma.</li>
+                        <li>foto en filmmateriaal die gemaakt worden, tijdens gerelateerde NK Little League evenmenten,
+                            gebruikt kan worden voor communicatie doeleinden ten behoeve van het NK Little League
+                            programma.</li>
+                    </ul>
+                </div>
 
 
-<div class="row">
- <!-- recaptcha div -->
- <div data-netlify-recaptcha="true" data-col="6" ></div>
- <!-- <button class="button">Inschrijven</button> -->
- <!-- submit button -->
+                <div class="row">
+                    <!-- recaptcha div -->
+                    <div data-netlify-recaptcha="true" data-col="6"></div>
+                    <!-- <button class="button">Inschrijven</button> -->
+                    <!-- submit button -->
+                    <div data-col="6" class="align-right">
+                        <button class="button">Inschrijven</button>
+                    </div>
 
-     <button class="button" data-col="6" >Inschrijven</button>
-
-</div>
 
                 </div>
+
             </div>
-            <input id="leeftijd" class="hidden" name="Leeftijd" type="text" />
-            <input id="bb_sb" class="hidden" name="bb_sb" type="text" />
-            <input id="league" class="hidden" name="League" type="text" />
+            </div>
+            <input required id="leeftijd" class="hidden" name="Leeftijd" type="text" />
+            <input required id="bb_sb" class="hidden" name="bb_sb" type="text" />
+            <input required id="league" class="hidden" name="League" type="text" />
         </form>
     </main>
 
@@ -303,7 +324,7 @@
                         leaguePlay = "Junior of Senior league";
                         break
                     case 15:
-                        leaguePlay =  "Senior league";
+                        leaguePlay = "Senior league";
                         break;
                     case 16:
                         leaguePlay = "Senior league";
@@ -327,10 +348,10 @@
                     $('#stap2').show();
 
                 }
-                else if (leagueAge != null && leagueAge < 10){
-                   $leagueAgeResult.append($('<p>').html('Volgens de little league leeftijd ben je <b>' + leagueAge + '</b> jaar oud. Helaas voldoe je niet aan de Little League leeftijdseis om mee te doen aan het NK. Je kunt mogelijk wel meedoen aan het Little League trainingsprogramma in je regio. De regiocoördinator kan hierover contact met je opnemen. <br>Voor meer m.b.t. het meedoen aan het NK kijk <a href=\"https://www.nklittleleague.nl/l/page/ik_wil_meedoen_met_de_little_league.html\" target=\"_blank\">op onze website.</a> Of bekijk de officiële Little League agecharts: <a href=\"https://www.littleleague.org/downloads/2020-baseball-age-chart/\" target=\"_blank\">Baseball</a> en <a href=\"https://www.littleleague.org/downloads/2020-softball-age-chart\" target=\"_blank\">Softball</a>.'));
+                else if (leagueAge != null && leagueAge < 10) {
+                    $leagueAgeResult.append($('<p>').html('Volgens de little league leeftijd ben je <b>' + leagueAge + '</b> jaar oud. Helaas voldoe je niet aan de Little League leeftijdseis om mee te doen aan het NK. Je kunt mogelijk wel meedoen aan het Little League trainingsprogramma in je regio. De regiocoördinator kan hierover contact met je opnemen. <br>Voor meer m.b.t. het meedoen aan het NK kijk <a href=\"https://www.nklittleleague.nl/l/page/ik_wil_meedoen_met_de_little_league.html\" target=\"_blank\">op onze website.</a> Of bekijk de officiële Little League agecharts: <a href=\"https://www.littleleague.org/downloads/2020-baseball-age-chart/\" target=\"_blank\">Baseball</a> en <a href=\"https://www.littleleague.org/downloads/2020-softball-age-chart\" target=\"_blank\">Softball</a>.'));
 
-                  $('#stap2').show();
+                    $('#stap2').show();
                 }
                 else {
                     $leagueAgeResult.append($('<p>').html('Helaas voldoe je niet aan de Little League leeftijdseis. Je kunt je jammer genoeg niet inschrijven voor het NK Little League.<br>Voor meer informatie m.b.t. het meedoen aan het NK <a href=\"https://www.nklittleleague.nl/l/page/ik_wil_meedoen_met_de_little_league.html\" target=\"_blank\">op onze website.</a> Of bekijk de officiële Little League agecharts: <a href=\"https://www.littleleague.org/downloads/2020-baseball-age-chart/\" target=\"_blank\">Baseball</a> en <a href=\"https://www.littleleague.org/downloads/2020-softball-age-chart\" target=\"_blank\">Softball</a>.'));
