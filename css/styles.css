@@ -17,9 +17,11 @@ main {
 }
 
 #stap2 {
-    display: none;
+    /* display: none; */
 }
-
+#inschrijfform{
+    /* display: none; */
+}
 select {
     padding: 3px 0;
 }

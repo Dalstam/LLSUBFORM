@@ -11,6 +11,7 @@
     <title>Inschrijfformulier NK Little League 2020</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="/js/checkSubscribed.js"></script>
 </head>
 
 <body>
@@ -23,8 +24,9 @@
     </header>
     <main>
 
-        <form class="inschrijfformulier" method="POST" action="/succes.html" data-netlify-recaptcha="true"
+        <form id="inschrijfform" class="inschrijfformulier" method="POST" action="/succes.html" data-netlify-recaptcha="true"
             data-netlify="true">
+            <!-- <form id="" class="inschrijfformulier"  action="succes.html" > -->
             <!-- agecalculator -->
             <div class="steps" id="agecalculator" data-grid="column va-center">
                 <h2 class="ta-center">Stap 1: Bepaal je leeftijd en league.</h2>
@@ -205,7 +207,7 @@
 
                 <div class="row">
                     <!-- recaptcha div -->
-                    <div data-netlify-recaptcha="true" data-col="6"></div>
+                    <div data-netlify-recaptcha="" data-col="6"></div>
                     <!-- <button class="button">Inschrijven</button> -->
                     <!-- submit button -->
                     <div data-col="6" class="align-right">
@@ -223,10 +225,6 @@
         </form>
     </main>
 
-    <script>
-            $(window).load(function() {
-                $('form').get(0).reset(); //clear form data on page load
-            });</script>
 
 
 
