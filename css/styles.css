@@ -17,9 +17,9 @@ main {
 }
 
 #stap2 {
-    /* display: none; */
+    display: none;
 }
-#inschrijfform{
+.inschrijfformulier{
     /* display: none; */
 }
 select {

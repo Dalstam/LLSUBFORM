@@ -1,3 +1,4 @@
-
-localStorage.setItem("subscribed", true);
-console.log(localStorage.getItem('subscribed'));
+$(document).ready(function () {
+sessionStorage.setItem("subscribed", true);
+console.log(sessionStorage.getItem('subscribed'));
+})
