@@ -12,18 +12,11 @@ main {
     padding: 3% 0;
 }
 
-#avg_check {
-    margin-right: 1rem;
-}
 
-#stap2 {
-    display: none;
-}
-.inschrijfformulier{
-    /* display: none; */
-}
 select {
-    padding: 3px 0;
+    border: initial;
+    border-bottom: solid 0.2px black;
+    padding: 2px 0;
 }
 
 h1 {
@@ -40,6 +33,38 @@ h3 {
 
 ul {
     margin: 0;
+}
+
+input[type='radio'] {
+    margin: 1rem;
+}
+
+select:required,
+input:required {
+    border: initial;
+    border-bottom: inset 0.2px red;
+}
+
+input:required+label {
+    border-bottom: inset 0.2px red;
+}
+
+input:valid+label {
+    border: initial;
+    border-bottom: inset 0.2px green;
+}
+
+input:valid:not(:checked)+label {
+    border: initial;
+}
+
+input[type=text]:optional {
+    border: initial;
+    border-bottom: solid 0.2px black;
+}
+
+.Iform {
+    display: none;
 }
 
 .field {
@@ -70,12 +95,7 @@ ul {
     text-align: center;
 }
 
-#logNK {
-    padding: 2%;
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-}
+
 
 .logoNK {
     height: 150px;
@@ -95,7 +115,30 @@ ul {
     }
 }
 
+#logNK {
+    padding: 2%;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
 
+#plaats,
+#schoolplaats {
+    text-transform: capitalize;
+}
+
+#postcode,
+#schoolpostcode {
+    text-transform: uppercase;
+}
+
+#avg_check {
+    margin-right: 1rem;
+}
+
+#stap2 {
+    display: none;
+}
 
 #bedankt {
     display: none;

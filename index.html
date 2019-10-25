@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>Inschrijfformulier NK Little League 2020</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <script src="/js/checkSubscribed.js"></script>
 </head>
 
@@ -87,32 +86,49 @@
 
             <div id="stap2" class="steps" data-grid="column">
                 <h2 class="ta-center">Stap 2: Inschrijven.</h2>
+
                 <!-- naamgegevens -->
                 <div class="row" id="naam">
                     <div class="field" data-col="4">
                         <label for="voornaam">Voornaam</label>
-                        <input required id="voornaam" name="Voornaam" type="text" placeholder="" />
+                        <input required id="voornaam" name="Voornaam" type="text" placeholder=""
+                            oninvalid="this.setCustomValidity('Vul je voornaam in.')" oninput="setCustomValidity('')" />
                     </div>
-                    <div class="field" data-col="2">
+                    <div class="field " data-col="2">
                         <label for="tussenvoegels">Tussenvoegels</label>
-                        <input id="tussenvoegels" name="Tussenvoegels" type="text" placeholder="" />
+                        <input id="tussenvoegels" class="notReq" name="Tussenvoegels" type="text" placeholder="" />
                     </div>
                     <div class="field" data-col="4">
                         <label for="achternaam">Achternaam</label>
-                        <input required id="achternaam" name="Achternaam" type="text" placeholder="" />
+                        <input required id="achternaam" name="Achternaam" type="text" placeholder=""
+                            oninvalid="this.setCustomValidity('Vul je achternaam in.')"
+                            oninput="setCustomValidity('')" />
                     </div>
 
                 </div>
                 <div class="row">
                     <div class="field" data-col="4">
                         <label for="emailadres">Emailadres</label>
-                        <input required id="emailadres" name="Emailadres" type="email" placeholder="" />
+                        <input required id="emailadres" name="Emailadres" type="email" placeholder=""
+                            oninvalid="this.setCustomValidity('Vul je email adres in.')"
+                            oninput="setCustomValidity('')" />
                     </div>
 
                     <div class="field" data-col="2">
                         <label for="geboortedatum">Geboortedatum</label>
                         <input required type="date" name="geboortedatum" id="Geboortedatum"
-                            (0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}>
+                            pattern="(0[1-9]|1[0-9]|2[0-9]|3[01]).(0[1-9]|1[012]).[0-9]{4}"
+                            oninvalid="this.setCustomValidity('Vul je geboortedatum in.')"
+                            oninput="setCustomValidity('')">
+                    </div>
+                    <div class="field" data-col="3">
+                       Ik ben een:
+                        <div class="row" data-grid="va-center" required>
+                            <input id="jongen"type="radio" name="gender" value="jongen" required
+                           > <label for="jongen">jongen</label>
+                            <input id="meisje" type="radio" name="gender" value="meisje" required
+                ><label for="meisje">meisje</label>
+                </div>
                     </div>
                 </div>
 
@@ -123,15 +139,21 @@
                         <h3 class="ta-center">Thuis adres</h3>
                         <div class="field">
                             <label for="adres">Adres</label>
-                            <input required id="adres" name="Adres_thuis" type="text" placeholder="" />
+                            <input required id="adres" name="Adres_thuis" type="text" placeholder=""
+                                oninvalid="this.setCustomValidity('Vul je adres in.')"
+                                oninput="setCustomValidity('')" />
                         </div>
                         <div class="field">
                             <label for="postcode">Postcode</label>
-                            <input required id="postcode" name="Postcode_thuis" type="text" placeholder="" />
+                            <input required id="postcode" name="Postcode_thuis" type="text" placeholder=""
+                                oninvalid="this.setCustomValidity('Vul je postcode in.')"
+                                oninput="setCustomValidity('')" />
                         </div>
                         <div class="field">
                             <label for="plaats">Woonplaats</label>
-                            <input required id="plaats" name="Woonplaats_thuis" type="text" placeholder="" />
+                            <input required id="plaats" name="Woonplaats_thuis" type="text" placeholder=""
+                                oninvalid="this.setCustomValidity('Vul je woonplaats in.')"
+                                oninput="setCustomValidity('')" />
                         </div>
 
                     </div>
@@ -143,19 +165,27 @@
                         <h3 class="ta-center">School adres</h3>
                         <div class="field">
                             <label for="naamschool">Naam School</label>
-                            <input required id="naamschool" name="School" type="text" placeholder="" />
+                            <input required id="naamschool" name="School" type="text" placeholder=""
+                                oninvalid="this.setCustomValidity('Vul de naam van je school in.')"
+                                oninput="setCustomValidity('')" />
                         </div>
                         <div class="field">
                             <label for="adresschool">Adres School</label>
-                            <input required id="adresschool" name="Adres_school" type="text" placeholder="" />
+                            <input required id="adresschool" name="Adres_school" type="text" placeholder=""
+                                oninvalid="this.setCustomValidity('Vul het adres van je school in.')"
+                                oninput="setCustomValidity('')" />
                         </div>
                         <div class="field">
                             <label for="postcodeschool">Postcode School</label>
-                            <input required id="postcodeschool" name="Postcode_school" type="text" placeholder="" />
+                            <input required id="postcodeschool" name="Postcode_school" type="text" placeholder=""
+                                oninvalid="this.setCustomValidity('Vul je de postcode van je school in.')"
+                                oninput="setCustomValidity('')" />
                         </div>
                         <div class="field">
                             <label for="schoolplaats">Plaats School</label>
-                            <input required id="schoolplaats" name="plaats_school" type="text" placeholder="" />
+                            <input required id="schoolplaats" name="plaats_school" type="text" placeholder=""
+                                oninvalid="this.setCustomValidity('Vul de plaats van je school in.')"
+                                oninput="setCustomValidity('')" />
                         </div>
                     </div>
 
@@ -165,12 +195,16 @@
                 <!-- email en club -->
                 <div id="email" class="row">
                     <div class="field" data-col="4">
-                        <label for="club">Club</label>
-                        <input required id="club" name="club" type="text" placeholder="" />
+                        <label for="club">Bij welke club speel je?</label>
+                        <input required id="club" name="club" type="text" placeholder=""
+                            oninvalid="this.setCustomValidity('Vul de naam van je club in.')"
+                            oninput="setCustomValidity('')" />
                     </div>
                     <div class="field" data-col="3">
                         <label for="regio">In welke regio speel je?</label>
-                        <select name="regio" name="regio" id="regio">
+                        <select name="regio" name="regio" id="regio" required
+                            oninvalid="this.setCustomValidity('Selecteer de regio waar je speelt in.')"
+                            oninput="setCustomValidity('')">
                             <option value="" disabled selected></option>
                             <option value="Amsterdam">Amsterdam</option>
                             <option value="Brabant/Zeeland">Brabant/Zeeland (Brabant West)</option>
@@ -8934,32 +8968,34 @@
                 $("#bb_sb").val(sportType);
 
 
-if (sportCode == 99) {
-    $('#stap2').hide();
-} else {
-
-
-
-                if (leagueAge != null && leagueAge > 9) {
-                    $leagueAgeResult.append($('<p>').html('Volgens de little league leeftijd ben je <b>' + leagueAge +
-                        '</b> jaar oud. Je kunt je inschrijven voor NK Little League 2020 programma en deelnemen in <b>' +
-                        leaguePlay + ' ' + sportType + "</b>."));
-
-                    $('#stap2').show();
-
-                } else if (leagueAge != null && leagueAge < 10) {
-                    $leagueAgeResult.append($('<p>').html('Volgens de little league leeftijd ben je <b>' + leagueAge +
-                        '</b> jaar oud. Helaas voldoe je niet aan de Little League leeftijdseis om mee te doen aan het NK. Je kunt mogelijk wel meedoen aan het Little League trainingsprogramma in je regio. De regiocoördinator kan hierover contact met je opnemen. <br>Voor meer m.b.t. het meedoen aan het NK kijk <a href=\"https://www.nklittleleague.nl/l/page/ik_wil_meedoen_met_de_little_league.html\" target=\"_blank\">op onze website.</a> Of bekijk de officiële Little League agecharts: <a href=\"https://www.littleleague.org/downloads/2020-baseball-age-chart/\" target=\"_blank\">Baseball</a> en <a href=\"https://www.littleleague.org/downloads/2020-softball-age-chart\" target=\"_blank\">Softball</a>.'
-                        ));
-                    $('#stap2').show();
+                if (sportCode == 99) {
+                    $('#stap2').hide();
                 } else {
-                    $leagueAgeResult.append($('<p>').html(
-                        'Helaas voldoe je niet aan de Little League leeftijdseis. Je kunt je jammer genoeg niet inschrijven voor het NK Little League.<br>Voor meer informatie m.b.t. het meedoen aan het NK <a href=\"https://www.nklittleleague.nl/l/page/ik_wil_meedoen_met_de_little_league.html\" target=\"_blank\">op onze website.</a> Of bekijk de officiële Little League agecharts: <a href=\"https://www.littleleague.org/downloads/2020-baseball-age-chart/\" target=\"_blank\">Baseball</a> en <a href=\"https://www.littleleague.org/downloads/2020-softball-age-chart\" target=\"_blank\">Softball</a>.'
+
+
+
+                    if (leagueAge != null && leagueAge > 9) {
+                        $leagueAgeResult.append($('<p>').html('Volgens de little league leeftijd ben je <b>' +
+                            leagueAge +
+                            '</b> jaar oud. Je kunt je inschrijven voor NK Little League 2020 programma en deelnemen in <b>' +
+                            leaguePlay + ' ' + sportType + "</b>."));
+
+                        $('#stap2').show();
+
+                    } else if (leagueAge != null && leagueAge < 10) {
+                        $leagueAgeResult.append($('<p>').html('Volgens de little league leeftijd ben je <b>' +
+                            leagueAge +
+                            '</b> jaar oud. Helaas voldoe je niet aan de Little League leeftijdseis om mee te doen aan het NK. Je kunt mogelijk wel meedoen aan het Little League trainingsprogramma in je regio. De regiocoördinator kan hierover contact met je opnemen. <br>Voor meer m.b.t. het meedoen aan het NK kijk <a href=\"https://www.nklittleleague.nl/l/page/ik_wil_meedoen_met_de_little_league.html\" target=\"_blank\">op onze website.</a> Of bekijk de officiële Little League agecharts: <a href=\"https://www.littleleague.org/downloads/2020-baseball-age-chart/\" target=\"_blank\">Baseball</a> en <a href=\"https://www.littleleague.org/downloads/2020-softball-age-chart\" target=\"_blank\">Softball</a>.'
+                        ));
+                        $('#stap2').show();
+                    } else {
+                        $leagueAgeResult.append($('<p>').html(
+                            'Helaas voldoe je niet aan de Little League leeftijdseis. Je kunt je jammer genoeg niet inschrijven voor het NK Little League.<br>Voor meer informatie m.b.t. het meedoen aan het NK <a href=\"https://www.nklittleleague.nl/l/page/ik_wil_meedoen_met_de_little_league.html\" target=\"_blank\">op onze website.</a> Of bekijk de officiële Little League agecharts: <a href=\"https://www.littleleague.org/downloads/2020-baseball-age-chart/\" target=\"_blank\">Baseball</a> en <a href=\"https://www.littleleague.org/downloads/2020-softball-age-chart\" target=\"_blank\">Softball</a>.'
                         ));
                         $('#stap2').hide();
-                }
+                    }
 
-            }
+                }
             }
         }
     </script>
