@@ -2,8 +2,9 @@
 
     console.log(localStorage.getItem('subscribed'));
     if (localStorage.getItem('subscribed')) {
-        $('#Iform')[0].reset;
+
         localStorage.setItem("subscribed", false);
+        location.reload();
     } else {
         localStorage.setItem("subscribed", false);
     }
