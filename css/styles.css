@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
 
 body {
-    background-color: #E5E5E5;
+    background-color:#E5E5E5;
     font-family: 'Varela Round', sans-serif;
     font-size: 1rem;
 }
@@ -14,9 +14,9 @@ main {
 
 
 select {
-    border: initial;
-    border-bottom: solid 0.2px black;
     padding: 2px 0;
+    border: initial;
+    border-bottom: solid 0.2px #0D47A1;
 }
 
 h1 {
@@ -25,6 +25,7 @@ h1 {
 
 h2 {
     font-size: 1.6rem;
+    text-decoration: underline #0D47A1;
 }
 
 h3 {
@@ -33,6 +34,10 @@ h3 {
 
 ul {
     margin: 0;
+}
+
+input[type=text]:optional {
+    border-bottom: solid 0.2px black;
 }
 
 input[type='radio'] {
@@ -49,22 +54,22 @@ input:required+label {
     border-bottom: inset 0.2px red;
 }
 
-input:valid+label {
+input:valid, select:valid {
     border: initial;
     border-bottom: inset 0.2px green;
 }
 
-input:valid:not(:checked)+label {
-    border: initial;
+input[type=radio]:checked+label,
+input[type=checkbox]:checked+label {
+    border-bottom: inset 0.2px green;
 }
 
-input[type=text]:optional {
+input[type=radio]:valid:not(:checked)+label {
     border: initial;
-    border-bottom: solid 0.2px black;
 }
 
 .Iform {
-    display: none;
+    /* display: none; */
 }
 
 .field {
@@ -96,13 +101,20 @@ input[type=text]:optional {
 }
 
 
-
 .logoNK {
     height: 150px;
 }
 
 .rotate {
     animation: rotation 3.5s infinite linear
+}
+
+
+#logNK {
+    padding: 2%;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
 }
 
 @keyframes rotation {
@@ -115,11 +127,8 @@ input[type=text]:optional {
     }
 }
 
-#logNK {
-    padding: 2%;
-    display: block;
-    margin: 0 auto;
-    width: 90%;
+#bedankt {
+    display: none;
 }
 
 #plaats,
@@ -137,10 +146,6 @@ input[type=text]:optional {
 }
 
 #stap2 {
-    display: none;
-}
-
-#bedankt {
     display: none;
 }
 
