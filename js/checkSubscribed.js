@@ -1,5 +1,5 @@
 // var subscribed = localStorage.getItem.subscribed
-$(document).ready(function () {
+
     console.log(localStorage.getItem('subscribed'));
     if (localStorage.getItem('subscribed')) {
         $('.inschrijfformulier')[0].reset;
@@ -7,4 +7,3 @@ $(document).ready(function () {
     } else {
         localStorage.setItem("subscribed", false);
     }
-})s
