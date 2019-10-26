@@ -2,7 +2,7 @@
 
     console.log(sessionStorage.getItem('subscribed'));
     if (sessionStorage.getItem('subscribed')) {
-alert();
+        $('#Iform')[0].reset();
 sessionStorage.setItem("subscribed", false);
 
     } else {
