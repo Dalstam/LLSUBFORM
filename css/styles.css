@@ -1,177 +1,174 @@
-@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
 
 body {
-    background-color:#E5E5E5;
-    font-family: 'Varela Round', sans-serif;
-    font-size: 1rem;
+  background-color: #e5e5e5;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1rem;
 }
 
 main {
-    margin: 0 auto;
-    width: 90%;
-    padding: 3% 0;
+  margin: 0 auto;
+  width: 90%;
+  padding: 3% 0;
 }
 
-
-
 h1 {
-    font-size: 2.6rem;
+  font-size: 2.6rem;
 }
 
 h2 {
-    font-size: 1.6rem;
-    text-decoration: underline #0D47A1;
+  font-size: 1.6rem;
+  text-decoration: underline #0d47a1;
 }
 
 h3 {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 ul {
-    margin: 0;
+  margin: 0;
 }
 
-input[type=text]:optional {
-    border-bottom: solid 0.2px black;
+input[type="text"]:optional {
+  border-bottom: solid 0.2px black;
 }
 
-input[type='radio'] {
-    margin: 1rem;
+input[type="radio"] {
+  margin: 1rem;
 }
 
 select:required,
 input:required {
-    border: initial;
-    border-bottom: inset 0.2px red;
+  border: initial;
+  border-bottom: inset 0.2px red;
 }
 
-input:required+label {
-    border-bottom: inset 0.2px red;
+input:required + label {
+  border-bottom: inset 0.2px red;
 }
 
-input:valid, select:valid {
-    border: initial;
-    border-bottom: inset 0.2px green;
+input:valid,
+select:valid {
+  border: initial;
+  border-bottom: inset 0.2px green;
 }
 
-input[type=radio]:checked+label,
-input[type=checkbox]:checked+label {
-    border-bottom: inset 0.2px green;
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  border-bottom: inset 0.2px green;
 }
 
-input[type=radio]:valid:not(:checked)+label {
-    border: initial;
+input[type="radio"]:valid:not(:checked) + label {
+  border: initial;
 }
 select {
-    padding: 2px 0;
-    border: initial;
-    border-bottom: solid 0.2px #0D47A1;
+  padding: 2px 0;
+  border: initial;
+  border-bottom: solid 0.2px #0d47a1;
 }
 
 .Iform {
-    /* display: none; */
+  /* display: none; */
 }
 
 .field {
-    display: flex;
-    flex-direction: column;
-    margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
 }
 
 .adresCol {
-    margin-top: 1%;
+  margin-top: 1%;
 }
 
 .row {
-    margin-bottom: 3%;
+  margin-bottom: 3%;
 }
 
 .steps {
-    padding: 2%;
-    background-color: #ffffff;
-    margin-top: 2rem;
-    border-top: 4px solid #0D47A1;
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  padding: 2%;
+  background-color: #ffffff;
+  margin-top: 2rem;
+  border-top: 4px solid #0d47a1;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .ta-center {
-    text-align: center;
+  text-align: center;
 }
 
-
 .logoNK {
-    height: 150px;
+  height: 150px;
 }
 
 .rotate {
-    animation: rotation 3.5s infinite linear
+  animation: rotation 3.5s infinite linear;
 }
 
-
 #logNK {
-    padding: 2%;
-    display: block;
-    margin: 0 auto;
-    width: 90%;
+  padding: 2%;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
 }
 
 @keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(359deg);
-    }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 #bedankt {
-    display: none;
+  display: none;
 }
 
 #plaats,
 #schoolplaats {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 #postcode,
 #schoolpostcode {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 #avg_check {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 #stap2 {
-    display: none;
+  display: none;
 }
 
 /* desktop */
 @media only screen and (min-width: 768px) {
-    body {
-        font-size: 1.6rem;
-    }
+  body {
+    font-size: 1.6rem;
+  }
 
-    h1 {
-        font-size: 3.6rem;
-    }
+  h1 {
+    font-size: 3.6rem;
+  }
 
-    h2 {
-        font-size: 2.6rem;
-    }
+  h2 {
+    font-size: 2.6rem;
+  }
 
-    h3 {
-        font-size: 2.4rem;
-    }
+  h3 {
+    font-size: 2.4rem;
+  }
 
-    select {
-        width: 75%;
-    }
+  select {
+    width: 75%;
+  }
 
-    .adresCol {
-        margin-top: 0%;
-    }
+  .adresCol {
+    margin-top: 0%;
+  }
 }
