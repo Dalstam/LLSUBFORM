@@ -2,23 +2,30 @@
 
 body {
   background-color: #e5e5e5;
-  font-family: "Varela Round", sans-serif;
+  font-family: "Calibri", sans-serif;
   font-size: 1rem;
 }
 
 main {
   margin: 0 auto;
   width: 90%;
-  padding: 3% 0;
+  padding: 0;
 }
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 3rem;
+  background-color: #C83B44;
+  color: white;
+  margin-top: -6px;
+  margin-bottom: 0px;
+
 }
 
 h2 {
-  font-size: 1.6rem;
-  text-decoration: underline #0d47a1;
+  font-size: 1.8rem;
+  color: #2D376C;
+  border-bottom: 2px solid #C83B44;
+  
 }
 
 h3 {
@@ -26,7 +33,22 @@ h3 {
 }
 
 ul {
-  margin: 0;
+  width: 100%;
+}
+
+label {
+  display: block;
+}
+input {
+  width: 100%;
+}
+
+#avg_check, #jongen, #meisje {
+  width: 2%;
+}
+
+label, select, .field, li {
+  font-size: 14px;
 }
 
 input[type="text"]:optional {
@@ -67,12 +89,15 @@ select {
   border-bottom: solid 0.2px #0d47a1;
 }
 
+#regio {
+  width: 100%;
+}
+
 .Iform {
   /* display: none; */
 }
 
 .field {
-  display: flex;
   flex-direction: column;
   margin-right: 10px;
 }
@@ -88,19 +113,34 @@ select {
 .steps {
   padding: 2%;
   background-color: #ffffff;
-  margin-top: 2rem;
-  border-top: 4px solid #0d47a1;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#stap2.steps {
+  margin-top: 20px;
 }
 
 .ta-center {
   text-align: center;
+  width: 100%;
+}
+
+
+#telefoon {
+  margin-bottom: 15px;
+}
+
+#agecalculator {
+  margin-top: -14px;
+}
+
+.align-right {
+  text-align: center;
 }
 
 .logoNK {
-  height: 150px;
+  height: 160px;
 }
 
 .rotate {
@@ -153,11 +193,11 @@ select {
   }
 
   h1 {
-    font-size: 3.6rem;
+    font-size: 8.0rem;
   }
 
   h2 {
-    font-size: 2.6rem;
+    font-size: 7.0rem;
   }
 
   h3 {
@@ -170,5 +210,12 @@ select {
 
   .adresCol {
     margin-top: 0%;
+  }
+  #agecalculator {
+    margin-top: -22px;
+  }
+
+  .align-right {
+    width: 100%;
   }
 }
